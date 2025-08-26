@@ -6,5 +6,6 @@ public enum OtpPurposes {
     FORGET_PASSWORD,
     ADD_EMAIL,
     ADD_PHONE,
-    CHANGE_PASSWORD
+    CHANGE_PASSWORD,
+    CHECKOUT
 }
