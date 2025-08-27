@@ -21,7 +21,7 @@ import java.util.function.Function;
 @Service
 @Slf4j
 @RequiredArgsConstructor
-public class JwtService {
+public class JwtConfig {
 
     @Value("{app.jwtSecret}")
     private String jwtSecret;
@@ -127,7 +127,7 @@ public class JwtService {
         }
     }
 
-    public Boolean isTokenValid(String token, Users user) {
+    public Boolean !isTokenBlacklisted(String token, Users user) {
         final String username = extractUserName(token);
         return (username.equals(user.getUsername()) &&
                 !isTokenExpired(token)
